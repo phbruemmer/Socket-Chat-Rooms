@@ -22,6 +22,7 @@ def listen_for_broadcast_message():
                 data, addr = sock.recvfrom(BUFFER)
                 print(f"[info] data received from {addr}: {data.decode()}")
                 print("[info] trying to connect...")
+                listening = False
             except socket.timeout:
                 listening = False
                 print("[info] listening timed out.")

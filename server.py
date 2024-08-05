@@ -27,7 +27,10 @@ def broadcast_beacon():
             time.sleep(5)
     except Exception as e:
         print(f"[ERROR] Broadcast error: {e}")
+    except KeyboardInterrupt:
+        print(f"[info] stopping...")
     finally:
+        SEND_BROADCAST_EVENT.set()
         sock.close()
 
 
