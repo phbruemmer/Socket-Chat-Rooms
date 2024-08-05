@@ -34,7 +34,8 @@ def listen_for_broadcast_message():
 
 
 def connect_to_lobby(addr):
-    pass
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.bind((addr, PORT))
 
 
 def client_main():

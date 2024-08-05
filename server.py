@@ -7,7 +7,11 @@ HOST = socket.gethostbyname(HOSTNAME)
 PORT = 5000
 BUFFER = 1024
 
+CLIENTS = []
+
 SEND_BROADCAST_EVENT = threading.Event()
+TCP_CONNECTION_EVENT = threading.Event()
+WAIT_FOR_CONNECTION_EVENT = threading.Event()
 
 
 def broadcast_beacon():
@@ -34,6 +38,38 @@ def broadcast_beacon():
         sock.close()
 
 
+def server_main_lobby():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.bind((HOST, PORT))
+    sock.listen(20)
+    print(f"[TCP] listening for connections on {HOST}:{PORT}")
+    try:
+        while not TCP_CONNECTION_EVENT.is_set():
+            sock.settimeout(1)
+            try:
+                conn, addr = sock.accept()
+                print(f"[info] connection from {addr}")
+                CLIENTS.append(conn)
+            except socket.timeout:
+                continue
+    except Exception as e:
+        print(f"[ERROR] connection handling error: {e}")
+    finally:
+        TCP_CONNECTION_EVENT.set()
+        sock.close()
+        print("[info] server socket closed.")
+
+
+def server_main():
+    broadcast_thread = threading.Thread(target=broadcast_beacon)
+    broadcast_thread.start()
+    while True:
+        lobby_thread = threading.Thread(target=server_main_lobby)
+        lobby_thread.start()
+        WAIT_FOR_CONNECTION_EVENT.wait()
+        WAIT_FOR_CONNECTION_EVENT.clear()
+
+
 if __name__ == "__main__":
     broadcast_beacon()
 
@@ -45,7 +81,7 @@ if __name__ == "__main__":
 -> TCP connection established
 -> "Lobby" - available commands: 
                 -> list_chats
-                -> join {ip/name}
+                -> join {ip/name} [username]
                 -> create [room] 
                     room: [name] [encryption_type] [allowed user number] [only chat / only voice / both] [open/closed]
                         -> encryption_type:
