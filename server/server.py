@@ -2,7 +2,6 @@ import socket
 import struct
 import threading
 import time
-import argparse
 
 HOSTNAME = socket.gethostname()
 HOST = socket.gethostbyname(HOSTNAME)

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- returns received Port for the Lobby Server  from BROADCAST back to main-routine.&#10;- modified TCP connection -&gt; with-statement">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Added more commenting&#10;- completed client thread&#10;-&gt; working on:&#10;- server_lobby_cmd -&gt; server lobby commands to send and process commands from client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,8 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.client" />
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.client" />
         <item itemvalue="Python.chat_rooms" />
       </list>
     </recent_temporary>
@@ -199,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722970863603</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- Added more commenting&#10;- completed client thread&#10;-&gt; working on:&#10;- server_lobby_cmd -&gt; server lobby commands to send and process commands from client">
+      <option name="closed" value="true" />
+      <created>1722971040068</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722971040068</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,6 +217,7 @@
     <MESSAGE value="- Added room class&#10;- Added Lobby connection" />
     <MESSAGE value="- Added more settings to the chat_rooms.&#10;- Fixed HOST-issue (missing -&gt; ())" />
     <MESSAGE value="- returns received Port for the Lobby Server  from BROADCAST back to main-routine.&#10;- modified TCP connection -&gt; with-statement" />
-    <option name="LAST_COMMIT_MESSAGE" value="- returns received Port for the Lobby Server  from BROADCAST back to main-routine.&#10;- modified TCP connection -&gt; with-statement" />
+    <MESSAGE value="- Added more commenting&#10;- completed client thread&#10;-&gt; working on:&#10;- server_lobby_cmd -&gt; server lobby commands to send and process commands from client" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added more commenting&#10;- completed client thread&#10;-&gt; working on:&#10;- server_lobby_cmd -&gt; server lobby commands to send and process commands from client" />
   </component>
 </project>
