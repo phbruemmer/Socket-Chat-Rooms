@@ -32,3 +32,6 @@ class Lobby:
 if __name__ == '__main__':
     lobby = Lobby('join [name]', "connection")
     lobby.process_command()
+    
+# Add cmd variable to arguments in process_command() -method
+# Remove __init__ 
