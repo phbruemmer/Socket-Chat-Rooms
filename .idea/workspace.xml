@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Added more commenting&#10;- completed client thread&#10;-&gt; working on:&#10;- server_lobby_cmd -&gt; server lobby commands to send and process commands from client">
-      <change afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,8 @@
     "Python.lobby_console.executor": "Run",
     "Python.server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/phbru/OneDrive/Desktop/Socket-Chat-Rooms"
   }
 }]]></component>
   <component name="RecentsManager">

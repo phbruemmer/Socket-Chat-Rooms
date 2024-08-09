@@ -3,9 +3,9 @@ import time
 
 
 class Lobby:
-    def __init__(self, command):
+    def __init__(self, command, conn):
         self.command = command
-        self.username = None
+        self.conn = conn
 
     def cmd_username(self, new_username):
         pass
@@ -30,5 +30,5 @@ class Lobby:
 
 
 if __name__ == '__main__':
-    lobby = Lobby('join [name]')
+    lobby = Lobby('join [name]', "connection")
     lobby.process_command()
