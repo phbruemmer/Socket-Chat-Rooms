@@ -2,6 +2,7 @@ import socket
 import struct
 import threading
 import time
+import lobby_console as lc
 
 HOSTNAME = socket.gethostname()
 HOST = socket.gethostbyname(HOSTNAME)
@@ -15,6 +16,8 @@ SEND_BROADCAST_EVENT = threading.Event()
 TCP_CONNECTION_EVENT = threading.Event()
 WAIT_FOR_CONNECTION_EVENT = threading.Event()
 LISTEN_FOR_CMD = threading.Event()
+
+lobby = lc.Lobby()
 
 
 def broadcast_beacon():
@@ -53,11 +56,10 @@ def server_lobby_cmd(conn):
     :param conn:
     :return:
     """
-    while True:
-        data_ = conn.recv(BUFFER).decode()
-        if not data_:
-            break
-        print(data_)
+
+    data_ = conn.recv(BUFFER).decode()
+    lobby.process_command(data_)
+    print("[info] waiting for next command...")
 
 
 def server_main_lobby():
