@@ -1,3 +1,4 @@
+import random
 import socket
 import struct
 import threading
@@ -10,7 +11,7 @@ BROADCAST_PORT = 5555
 PORT = 5000
 BUFFER = 1024
 
-CLIENTS = []
+CLIENTS = {}
 
 SEND_BROADCAST_EVENT = threading.Event()
 TCP_CONNECTION_EVENT = threading.Event()
@@ -67,6 +68,12 @@ def server_main_lobby():
     - accepts TCP connections and starts new thread to handle new client.
     :return:
     """
+    def random_user_id():
+        # Problem:
+        # User ID can be overwritten
+        random_num = random.randint(1, 9999)
+        return random_num
+
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind((HOST, PORT))
         sock.listen(20)
@@ -75,7 +82,10 @@ def server_main_lobby():
             while not TCP_CONNECTION_EVENT.is_set():
                 conn, addr = sock.accept()
                 print(f"[info] connection from {addr}")
-                CLIENTS.append(conn)
+                user_id = random_user_id()
+                print(user_id)
+                CLIENTS[1] = conn
+                print(CLIENTS)
                 server_lobby_thread = threading.Thread(target=server_lobby_cmd, args=(conn,))
                 server_lobby_thread.start()
         except socket.timeout:

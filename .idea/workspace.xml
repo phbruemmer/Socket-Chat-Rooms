@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Added User class&#10;- Thinking about solutions on how to use &quot;user accounts&quot; to send and receive data in a room. This approach should enable direct messages in the future too.">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,19 +44,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.chat_rooms.executor": "Run",
-    "Python.client (1).executor": "Run",
-    "Python.client.executor": "Run",
-    "Python.lobby_console.executor": "Run",
-    "Python.server (1).executor": "Run",
-    "Python.server.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/phbru/OneDrive/Desktop/Socket-Chat-Rooms"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.chat_rooms.executor&quot;: &quot;Run&quot;,
+    &quot;Python.client (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lobby_console.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/phbru/OneDrive/Desktop/Socket-Chat-Rooms&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\phbru\PycharmProjects\SocketChat\pythonProject\client" />
@@ -68,7 +65,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.client (1)">
-    <configuration name="client (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="client (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -268,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723211127289</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)">
+      <option name="closed" value="true" />
+      <created>1723238859029</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723238859029</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -280,6 +285,7 @@
     <MESSAGE value="- returns received Port for the Lobby Server  from BROADCAST back to main-routine.&#10;- modified TCP connection -&gt; with-statement" />
     <MESSAGE value="- Added more commenting&#10;- completed client thread&#10;-&gt; working on:&#10;- server_lobby_cmd -&gt; server lobby commands to send and process commands from client" />
     <MESSAGE value="- Added User class&#10;- Thinking about solutions on how to use &quot;user accounts&quot; to send and receive data in a room. This approach should enable direct messages in the future too." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added User class&#10;- Thinking about solutions on how to use &quot;user accounts&quot; to send and receive data in a room. This approach should enable direct messages in the future too." />
+    <MESSAGE value="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)" />
   </component>
 </project>
