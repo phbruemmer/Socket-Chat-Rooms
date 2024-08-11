@@ -113,35 +113,3 @@ def server_main():
 if __name__ == "__main__":
     server_main()
 
-
-
-
-
-
-"""
-# # # SERVER - STRUCTURE # # #
-
--> Send Broadcast Beacon
--> Client gets IP and connects with TCP to the server...
--> TCP connection established
--> "Lobby" - available commands: 
-                -> list_chats
-                -> join {ip/name} [username]
-                -> create [room] 
-                    room: [name] [encryption_type] [allowed user number] [only chat / only voice / both] [open/closed]
-                        -> encryption_type:
-                            - encryption with own key
-                            - encryption based on own script
-                            - open-encryption (saved on server)
--> "room" - available commands:
-                -> !leave
-                -> !ban (only admins)
-                -> !kick (only admins)
-                -> !add_admin [name] (only admins)
-                -> !rm_admin [name] (only admins) [OWNER EXCLUDED]
-                -> !mute
-                -> !unmute
-                -> !deaf -> [name] (only admins)
-                -> !terminate
-"""
-
