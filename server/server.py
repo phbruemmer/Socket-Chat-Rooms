@@ -1,7 +1,9 @@
+import random
 import socket
 import struct
 import threading
 import time
+import lobby_console as lc
 
 HOSTNAME = socket.gethostname()
 HOST = socket.gethostbyname(HOSTNAME)
@@ -9,12 +11,14 @@ BROADCAST_PORT = 5555
 PORT = 5000
 BUFFER = 1024
 
-CLIENTS = []
+CLIENTS = {}
 
 SEND_BROADCAST_EVENT = threading.Event()
 TCP_CONNECTION_EVENT = threading.Event()
 WAIT_FOR_CONNECTION_EVENT = threading.Event()
 LISTEN_FOR_CMD = threading.Event()
+
+lobby = lc.Lobby()
 
 
 def broadcast_beacon():
@@ -53,11 +57,10 @@ def server_lobby_cmd(conn):
     :param conn:
     :return:
     """
-    while True:
-        data_ = conn.recv(BUFFER).decode()
-        if not data_:
-            break
-        print(data_)
+
+    data_ = conn.recv(BUFFER).decode()
+    lobby.process_command(data_)
+    print("[info] waiting for next command...")
 
 
 def server_main_lobby():
@@ -65,6 +68,12 @@ def server_main_lobby():
     - accepts TCP connections and starts new thread to handle new client.
     :return:
     """
+    def random_user_id():
+        # Problem:
+        # User ID can be overwritten
+        random_num = random.randint(1, 9999)
+        return random_num
+
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind((HOST, PORT))
         sock.listen(20)
@@ -73,7 +82,10 @@ def server_main_lobby():
             while not TCP_CONNECTION_EVENT.is_set():
                 conn, addr = sock.accept()
                 print(f"[info] connection from {addr}")
-                CLIENTS.append(conn)
+                user_id = random_user_id()
+                print(user_id)
+                CLIENTS[1] = conn
+                print(CLIENTS)
                 server_lobby_thread = threading.Thread(target=server_lobby_cmd, args=(conn,))
                 server_lobby_thread.start()
         except socket.timeout:
@@ -100,36 +112,4 @@ def server_main():
 
 if __name__ == "__main__":
     server_main()
-
-
-
-
-
-
-"""
-# # # SERVER - STRUCTURE # # #
-
--> Send Broadcast Beacon
--> Client gets IP and connects with TCP to the server...
--> TCP connection established
--> "Lobby" - available commands: 
-                -> list_chats
-                -> join {ip/name} [username]
-                -> create [room] 
-                    room: [name] [encryption_type] [allowed user number] [only chat / only voice / both] [open/closed]
-                        -> encryption_type:
-                            - encryption with own key
-                            - encryption based on own script
-                            - open-encryption (saved on server)
--> "room" - available commands:
-                -> !leave
-                -> !ban (only admins)
-                -> !kick (only admins)
-                -> !add_admin [name] (only admins)
-                -> !rm_admin [name] (only admins) [OWNER EXCLUDED]
-                -> !mute
-                -> !unmute
-                -> !deaf -> [name] (only admins)
-                -> !terminate
-"""
 

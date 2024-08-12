@@ -37,7 +37,7 @@ def listen_for_broadcast_message():
 def connect_to_lobby(addr, port):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.connect((addr, port))
-        sock.send(b'Test')
+        sock.send(b'$username DIIDN')
         sock.close()
 
 
