@@ -1,7 +1,3 @@
-import os
-import time
-
-
 class Lobby:
     def cmd_username(self, user, new_username):
         print(new_username)
