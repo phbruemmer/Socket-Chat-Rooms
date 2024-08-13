@@ -3,7 +3,9 @@ import socket
 import struct
 import threading
 import time
+
 import lobby_console as lc
+import user
 
 HOSTNAME = socket.gethostname()
 HOST = socket.gethostbyname(HOSTNAME)
@@ -57,9 +59,20 @@ def server_lobby_cmd(conn):
     :param conn:
     :return:
     """
+    def random_user_id():
+        while True:
+            random_num = random.randint(1, 999999)
+            if random_num not in CLIENTS:
+                break
+        return random_num
 
-    data_ = conn.recv(BUFFER).decode()
-    lobby.process_command(data_)
+    user_id = random_user_id()
+    CLIENTS[user_id] = conn
+    print(CLIENTS)
+
+    username_ = conn.recv(BUFFER).decode()
+    cur_user = user.User(username_, user_id)
+
     print("[info] waiting for next command...")
 
 
@@ -68,11 +81,6 @@ def server_main_lobby():
     - accepts TCP connections and starts new thread to handle new client.
     :return:
     """
-    def random_user_id():
-        # Problem:
-        # User ID can be overwritten
-        random_num = random.randint(1, 9999)
-        return random_num
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind((HOST, PORT))
@@ -82,10 +90,6 @@ def server_main_lobby():
             while not TCP_CONNECTION_EVENT.is_set():
                 conn, addr = sock.accept()
                 print(f"[info] connection from {addr}")
-                user_id = random_user_id()
-                print(user_id)
-                CLIENTS[1] = conn
-                print(CLIENTS)
                 server_lobby_thread = threading.Thread(target=server_lobby_cmd, args=(conn,))
                 server_lobby_thread.start()
         except socket.timeout:
