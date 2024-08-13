@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- removed imports from lobby_console.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,8 +275,27 @@
       <option name="project" value="LOCAL" />
       <updated>1723238859029</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- removed imports from lobby_console.py">
+      <option name="closed" value="true" />
+      <created>1723499689347</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723499689347</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- First commit" />
@@ -286,6 +307,8 @@
     <MESSAGE value="- Added more commenting&#10;- completed client thread&#10;-&gt; working on:&#10;- server_lobby_cmd -&gt; server lobby commands to send and process commands from client" />
     <MESSAGE value="- Added User class&#10;- Thinking about solutions on how to use &quot;user accounts&quot; to send and receive data in a room. This approach should enable direct messages in the future too." />
     <MESSAGE value="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)" />
+    <MESSAGE value="workspace.xml" />
+    <MESSAGE value="- removed imports from lobby_console.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="- removed imports from lobby_console.py" />
   </component>
 </project>

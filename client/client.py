@@ -34,10 +34,18 @@ def listen_for_broadcast_message():
     return (addr[0], PORT) if addr or PORT else None
 
 
+def get_username(sock):
+    print("# # # # # # # # # # # # # # #\nE N T E R - U S E R N A M E\n")
+    username = input("> > > ")
+    print(". . .")
+    sock.send(username.encode())
+    print("[info] username sent.")
+
+
 def connect_to_lobby(addr, port):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.connect((addr, port))
-        sock.send(b'$username DIIDN')
+        get_username(sock)
         sock.close()
 
 
