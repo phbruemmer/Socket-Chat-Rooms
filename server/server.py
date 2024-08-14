@@ -66,14 +66,20 @@ def server_lobby_cmd(conn):
                 break
         return random_num
 
+    def command_line():
+        while True:
+            print("[info] waiting for next command...")
+            data_ = conn.recv(BUFFER).decode()
+            print(data_)
+            lobby.process_command(command=data_, user=cur_user)
     user_id = random_user_id()
     CLIENTS[user_id] = conn
     print(CLIENTS)
 
     username_ = conn.recv(BUFFER).decode()
     cur_user = user.User(username_, user_id)
+    command_line()
 
-    print("[info] waiting for next command...")
 
 
 def server_main_lobby():
