@@ -59,6 +59,7 @@ def server_lobby_cmd(conn):
     :param conn:
     :return:
     """
+
     def random_user_id():
         while True:
             random_num = random.randint(1, 999999)
@@ -77,6 +78,7 @@ def server_lobby_cmd(conn):
     print(CLIENTS)
 
     username_ = conn.recv(BUFFER).decode()
+    print(username_)
     cur_user = user.User(username_, user_id)
     command_line()
 

@@ -74,7 +74,7 @@ def connected_client(sock):
 
     recv_thread = threading.Thread(target=receiver)
     send_thread = threading.Thread(target=sender)
-    recv_thread.start()
+    # recv_thread.start()
     send_thread.start()
 
 

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- removed imports from lobby_console.py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- small changes due to user class">
       <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -283,7 +281,31 @@
       <option name="project" value="LOCAL" />
       <updated>1723499689347</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- Added initial connection sequence.&#10;- Added input restrictions">
+      <option name="closed" value="true" />
+      <created>1723656220734</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723656220734</updated>
+    </task>
+    <task id="LOCAL-00012" summary="- small changes">
+      <option name="closed" value="true" />
+      <created>1723656283810</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723656283810</updated>
+    </task>
+    <task id="LOCAL-00013" summary="- small changes due to user class">
+      <option name="closed" value="true" />
+      <created>1723656305425</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723656305425</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,6 +331,9 @@
     <MESSAGE value="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="- removed imports from lobby_console.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="- removed imports from lobby_console.py" />
+    <MESSAGE value="- Added initial connection sequence.&#10;- Added input restrictions" />
+    <MESSAGE value="- small changes" />
+    <MESSAGE value="- small changes due to user class" />
+    <option name="LAST_COMMIT_MESSAGE" value="- small changes due to user class" />
   </component>
 </project>
