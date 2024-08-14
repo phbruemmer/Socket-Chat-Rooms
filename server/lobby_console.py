@@ -20,3 +20,4 @@ class Lobby:
         print(argument_length)
         if main_cmd == '$username' and argument_length == 1:
             self.cmd_username(user, cmd_arguments)
+
