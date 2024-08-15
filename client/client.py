@@ -40,6 +40,9 @@ def listen_for_broadcast_message():
 def get_username(sock):
     print("# # # # # # # # # # # # # # #\nE N T E R - U S E R N A M E\n")
     username = input("> > > ")
+    #
+    # Maybe insecure because of client-side manipulation and no server-side checks
+    #
     while not re.match(r"^[A-Za-z0-9]*$", username) or re.match(r'^[\s\t\n]*$', username):
         print("[info] only english letters and numbers from 0 - 9 are allowed.")
         username = input("> > > ")
@@ -51,29 +54,25 @@ def get_username(sock):
 def connected_client(sock):
     connected = threading.Event()
 
-    def receiver():
+    def receiver(connection):
         print("[info] listening to server...")
-        while not connected.is_set():
+        while not connection.is_set():
             data_ = sock.recv(BUFFER)
             while data_:
-                print(data_)
+                print(data_.decode())
                 data_ = sock.recv(BUFFER)
-    def sender():
+
+    def sender(connection):
         print("[info] chat available.")
-        while not connected.is_set():
+        while not connection.is_set():
             msg_ = input("> ")
-            if not len(msg_) > 32:
-                continue
-            print(123)
-            msg_ = msg_.encode()
-            sock.send(msg_)
+            sock.send(msg_.encode())
             if msg_ == b'$exit':
-                connected.set()
+                connection.set()
                 return
 
-
-    recv_thread = threading.Thread(target=receiver)
-    send_thread = threading.Thread(target=sender)
+    recv_thread = threading.Thread(target=receiver, args=(connected,))
+    send_thread = threading.Thread(target=sender, args=(connected,))
     # recv_thread.start()
     send_thread.start()
 

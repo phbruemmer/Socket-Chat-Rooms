@@ -13,6 +13,7 @@ class Lobby:
         pass
 
     def process_command(self, command, user):
+        print(command)
         cmd_instructions = command.split()
         main_cmd = cmd_instructions[0]
         cmd_arguments = cmd_instructions.pop(-1)

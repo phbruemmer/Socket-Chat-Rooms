@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- small changes due to user class">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- ERROR with receiving username and data">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,8 +179,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.client (1)" />
         <item itemvalue="Python.server (1)" />
+        <item itemvalue="Python.client (1)" />
         <item itemvalue="Python.lobby_console" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.client" />
@@ -305,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723656305425</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="- ERROR with receiving username and data">
+      <option name="closed" value="true" />
+      <created>1723656977945</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723656977945</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,6 +344,7 @@
     <MESSAGE value="- Added initial connection sequence.&#10;- Added input restrictions" />
     <MESSAGE value="- small changes" />
     <MESSAGE value="- small changes due to user class" />
-    <option name="LAST_COMMIT_MESSAGE" value="- small changes due to user class" />
+    <MESSAGE value="- ERROR with receiving username and data" />
+    <option name="LAST_COMMIT_MESSAGE" value="- ERROR with receiving username and data" />
   </component>
 </project>
