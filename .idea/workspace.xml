@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- ERROR with receiving username and data">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Could not fix the bug but modified and simplified stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +63,7 @@
       <recent name="C:\Users\phbru\PycharmProjects\SocketChat\pythonProject\rooms" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.server (1)">
+  <component name="RunManager" selected="Python.client (1)">
     <configuration name="client (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -179,8 +176,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.server (1)" />
         <item itemvalue="Python.client (1)" />
+        <item itemvalue="Python.server (1)" />
         <item itemvalue="Python.lobby_console" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.client" />
@@ -315,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723656977945</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="- Could not fix the bug but modified and simplified stuff">
+      <option name="closed" value="true" />
+      <created>1723741444763</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1723741444763</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -345,6 +350,7 @@
     <MESSAGE value="- small changes" />
     <MESSAGE value="- small changes due to user class" />
     <MESSAGE value="- ERROR with receiving username and data" />
-    <option name="LAST_COMMIT_MESSAGE" value="- ERROR with receiving username and data" />
+    <MESSAGE value="- Could not fix the bug but modified and simplified stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Could not fix the bug but modified and simplified stuff" />
   </component>
 </project>

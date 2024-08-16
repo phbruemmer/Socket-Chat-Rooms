@@ -58,9 +58,11 @@ def connected_client(sock):
         print("[info] listening to server...")
         while not connection.is_set():
             data_ = sock.recv(BUFFER)
-            while data_:
-                print(data_.decode())
-                data_ = sock.recv(BUFFER)
+            while True:
+                if not data_:
+                    print("[info] no data received.")
+                    break
+                data_ += sock.recv(BUFFER)
 
     def sender(connection):
         print("[info] chat available.")
@@ -73,7 +75,7 @@ def connected_client(sock):
 
     recv_thread = threading.Thread(target=receiver, args=(connected,))
     send_thread = threading.Thread(target=sender, args=(connected,))
-    # recv_thread.start()
+    recv_thread.start()
     send_thread.start()
 
 
