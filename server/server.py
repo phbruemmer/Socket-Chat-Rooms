@@ -59,6 +59,7 @@ def server_lobby_cmd(conn):
     :param conn:
     :return:
     """
+    connected = threading.Event()
 
     def random_user_id():
         while True:
@@ -67,8 +68,8 @@ def server_lobby_cmd(conn):
                 break
         return random_num
 
-    def command_line(user_):
-        while True:
+    def command_line(user_, connection):
+        while not connection.is_set():
             data_ = conn.recv(BUFFER)
             while data_:
                 data_ += conn.recv(BUFFER)
@@ -83,7 +84,7 @@ def server_lobby_cmd(conn):
     username_ = conn.recv(BUFFER).decode()
     print(username_)
     cur_user = user.User(username_, user_id)
-    command_line(cur_user)
+    command_line(cur_user, connected)
 
 
 def server_main_lobby():

@@ -56,27 +56,48 @@ def connected_client(sock):
 
     def receiver(connection):
         print("[info] listening to server...")
-        while not connection.is_set():
-            data_ = sock.recv(BUFFER)
-            while True:
+        try:
+            while not connection.is_set():
+                data_ = sock.recv(BUFFER)
                 if not data_:
-                    print("[info] no data received.")
+                    print("[info] no data received, server might have closed the connection.")
+                    connection.set()
                     break
-                data_ += sock.recv(BUFFER)
+                print(data_.decode())
+        except ConnectionResetError:
+            print("[error] Connection was reset by the server.")
+            connection.set()
+        except Exception as e:
+            print(f"[error] Unexpected error in receiver: {e}")
+        finally:
+            print("[info] receiver thread closing.")
 
     def sender(connection):
         print("[info] chat available.")
-        while not connection.is_set():
-            msg_ = input("> ")
-            sock.send(msg_.encode())
-            if msg_ == b'$exit':
-                connection.set()
-                return
+        try:
+            while not connection.is_set():
+                msg_ = input("> ")
+                sock.send(msg_.encode())
+                if msg_ == "$exit":
+                    connection.set()
+                    return
+        except BrokenPipeError:
+            print("[error] Cannot send data, connection closed.")
+            connection.set()
+        except Exception as e:
+            print(f"[error] Unexpected error in sender: {e}")
+        finally:
+            print("[info] sender thread closing.")
 
     recv_thread = threading.Thread(target=receiver, args=(connected,))
     send_thread = threading.Thread(target=sender, args=(connected,))
     recv_thread.start()
     send_thread.start()
+
+    recv_thread.join()
+    send_thread.join()
+    print("[info] Client disconnected.")
+
 
 
 def connect_to_lobby(addr, port):

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Could not fix the bug but modified and simplified stuff">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- data receiving still not working&#10;- Tried small change in the receiver function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723741444763</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="- data receiving still not working&#10;- Tried small change in the receiver function">
+      <option name="closed" value="true" />
+      <created>1723826336057</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723826336057</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,6 +361,7 @@
     <MESSAGE value="- small changes due to user class" />
     <MESSAGE value="- ERROR with receiving username and data" />
     <MESSAGE value="- Could not fix the bug but modified and simplified stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Could not fix the bug but modified and simplified stuff" />
+    <MESSAGE value="- data receiving still not working&#10;- Tried small change in the receiver function" />
+    <option name="LAST_COMMIT_MESSAGE" value="- data receiving still not working&#10;- Tried small change in the receiver function" />
   </component>
 </project>
