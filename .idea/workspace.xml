@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- data receiving still not working&#10;- Tried small change in the receiver function">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Fixed connection error&#10;- Trying to receive data continuously">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
@@ -36,6 +36,9 @@
     &quot;accountId&quot;: &quot;2b92bd18-1aee-4ecf-9d00-0d92cec588c9&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -58,6 +61,11 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/phbru/OneDrive/Desktop/Socket-Chat-Rooms&quot;
   }
 }</component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\phbru\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="149d8e2a-874f-4fbd-9031-8cb79bee2049" reportId="pythonProject/qodana/2024-08-17" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\phbru\PycharmProjects\SocketChat\pythonProject\client" />
@@ -65,7 +73,7 @@
       <recent name="C:\Users\phbru\PycharmProjects\SocketChat\pythonProject\rooms" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.client (1)">
+  <component name="RunManager" selected="Python.server (1)">
     <configuration name="client (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -330,7 +338,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723826336057</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="- Fixed connection error&#10;- Trying to receive data continuously">
+      <option name="closed" value="true" />
+      <created>1723908239920</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1723908239920</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -362,6 +378,7 @@
     <MESSAGE value="- ERROR with receiving username and data" />
     <MESSAGE value="- Could not fix the bug but modified and simplified stuff" />
     <MESSAGE value="- data receiving still not working&#10;- Tried small change in the receiver function" />
-    <option name="LAST_COMMIT_MESSAGE" value="- data receiving still not working&#10;- Tried small change in the receiver function" />
+    <MESSAGE value="- Fixed connection error&#10;- Trying to receive data continuously" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed connection error&#10;- Trying to receive data continuously" />
   </component>
 </project>

@@ -54,7 +54,7 @@ def get_username(sock):
 def connected_client(sock):
     connected = threading.Event()
 
-    def receiver(connection):
+    """def receiver(connection):
         print("[info] listening to server...")
         try:
             while not connection.is_set():
@@ -70,7 +70,7 @@ def connected_client(sock):
         except Exception as e:
             print(f"[error] Unexpected error in receiver: {e}")
         finally:
-            print("[info] receiver thread closing.")
+            print("[info] receiver thread closing.")"""
 
     def sender(connection):
         print("[info] chat available.")
@@ -89,15 +89,12 @@ def connected_client(sock):
         finally:
             print("[info] sender thread closing.")
 
-    recv_thread = threading.Thread(target=receiver, args=(connected,))
-    send_thread = threading.Thread(target=sender, args=(connected,))
-    recv_thread.start()
-    send_thread.start()
+    # recv_thread = threading.Thread(target=receiver, args=(connected,))
+    # recv_thread.start()
+    sender(connected)
 
-    recv_thread.join()
-    send_thread.join()
+    # recv_thread.join()
     print("[info] Client disconnected.")
-
 
 
 def connect_to_lobby(addr, port):
