@@ -59,8 +59,6 @@ def server_lobby_cmd(conn):
     :param conn:
     :return:
     """
-    connected = threading.Event()
-
     def random_user_id():
         while True:
             random_num = random.randint(1, 999999)

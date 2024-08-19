@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Fixed connection error&#10;- Trying to receive data continuously">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Receiving error fixed in command_line() -function.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rooms/chat_rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/rooms/chat_rooms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,8 +187,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.client (1)" />
         <item itemvalue="Python.server (1)" />
+        <item itemvalue="Python.client (1)" />
         <item itemvalue="Python.lobby_console" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.client" />
@@ -346,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723908239920</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="- Receiving error fixed in command_line() -function.">
+      <option name="closed" value="true" />
+      <created>1724000468978</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1724000468978</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,6 +388,7 @@
     <MESSAGE value="- Could not fix the bug but modified and simplified stuff" />
     <MESSAGE value="- data receiving still not working&#10;- Tried small change in the receiver function" />
     <MESSAGE value="- Fixed connection error&#10;- Trying to receive data continuously" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed connection error&#10;- Trying to receive data continuously" />
+    <MESSAGE value="- Receiving error fixed in command_line() -function." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Receiving error fixed in command_line() -function." />
   </component>
 </project>
