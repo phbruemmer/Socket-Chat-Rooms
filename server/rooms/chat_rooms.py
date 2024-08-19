@@ -1,12 +1,13 @@
 import socket
 import threading
+import server.user
 
 HOST = socket.gethostbyname(socket.gethostname())
 
 
 class Room:
-    def __init__(self, host=HOST, port=5000, max_users=20,
-                 room_name='standard_room', global_room=False, room_password=''):
+    def __init__(self, host=HOST, port=3000, max_users=20,
+                 room_name='standard_room', global_room=False, room_password='', admin=server.user.User):
         self.host = host
         self.port = port
         self.room_name = room_name
@@ -15,6 +16,7 @@ class Room:
         self.room_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.room_socket.bind((host, port))
         self.room_socket.listen(max_users)
+        self.admin = admin
         print(f"[info] new room started and listening on {self.host}:{self.port}")
 
     def start_room(self):
