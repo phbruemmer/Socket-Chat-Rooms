@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Receiving error fixed in command_line() -function.">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rooms/chat_rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/rooms/chat_rooms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,7 +352,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724000468978</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="- Small changes in server.py">
+      <option name="closed" value="true" />
+      <created>1724102135384</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724102135384</updated>
+    </task>
+    <task id="LOCAL-00020" summary="- Added Admin argument to chat_rooms.py">
+      <option name="closed" value="true" />
+      <created>1724102202590</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724102202590</updated>
+    </task>
+    <task id="LOCAL-00021" summary="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py">
+      <option name="closed" value="true" />
+      <created>1724102253685</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724102253685</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,6 +410,9 @@
     <MESSAGE value="- data receiving still not working&#10;- Tried small change in the receiver function" />
     <MESSAGE value="- Fixed connection error&#10;- Trying to receive data continuously" />
     <MESSAGE value="- Receiving error fixed in command_line() -function." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Receiving error fixed in command_line() -function." />
+    <MESSAGE value="- Small changes in server.py" />
+    <MESSAGE value="- Added Admin argument to chat_rooms.py" />
+    <MESSAGE value="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py" />
   </component>
 </project>
