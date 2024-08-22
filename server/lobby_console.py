@@ -18,6 +18,7 @@ class Lobby:
                 new_port = random.randint(3000, 3100)
             print(new_port)
             return new_port
+
         if create_type == 'chat':
             port = get_available_port()
             new_room = rooms.chat_rooms.Room(port=port, room_name=name, room_password=password, admin=user)
@@ -34,9 +35,12 @@ class Lobby:
         print(command)
         cmd_instructions = command.split()
         main_cmd = cmd_instructions[0]
-        cmd_arguments = cmd_instructions.pop(-1)
-        argument_length = len(cmd_instructions)
+        argument_length = len(cmd_instructions) - 1
         print(argument_length)
         if main_cmd == '$username' and argument_length == 1:
-            self.cmd_username(user, cmd_arguments)
+            self.cmd_username(user, cmd_instructions[1])
+        elif main_cmd == '$create' and (argument_length == 2 or argument_length == 3):
+            if argument_length < 3:
+                cmd_instructions.append('')
+            self.cmd_create(user, cmd_instructions[1], cmd_instructions[2], cmd_instructions[3])
 
