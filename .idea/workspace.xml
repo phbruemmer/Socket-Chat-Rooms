@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="-">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rooms/chat_rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/rooms/chat_rooms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,8 +187,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.server (1)" />
         <item itemvalue="Python.client (1)" />
+        <item itemvalue="Python.server (1)" />
         <item itemvalue="Python.lobby_console" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.client" />
@@ -376,7 +379,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724102253685</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="- Small changes to the codebase">
+      <option name="closed" value="true" />
+      <created>1724278828354</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724278828354</updated>
+    </task>
+    <task id="LOCAL-00023" summary="-">
+      <option name="closed" value="true" />
+      <created>1724280330352</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724280330352</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,6 +432,8 @@
     <MESSAGE value="- Small changes in server.py" />
     <MESSAGE value="- Added Admin argument to chat_rooms.py" />
     <MESSAGE value="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py" />
+    <MESSAGE value="- Small changes to the codebase" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
 </project>
