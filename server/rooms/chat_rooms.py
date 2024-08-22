@@ -1,13 +1,13 @@
 import socket
 import threading
-import server.user
+# import server.user
 
 HOST = socket.gethostbyname(socket.gethostname())
 
 
 class Room:
     def __init__(self, host=HOST, port=3000, max_users=20,
-                 room_name='standard_room', global_room=False, room_password='', admin=server.user.User):
+                 room_name='standard_room', global_room=False, room_password='', admin=None):
         self.host = host
         self.port = port
         self.room_name = room_name
@@ -20,15 +20,19 @@ class Room:
         print(f"[info] new room started and listening on {self.host}:{self.port}")
 
     def start_room(self):
-        try:
-            while True:
-                conn, addr = self.room_socket.accept()
-                print(f"[info] connection established with {addr}")
-                client_handler = threading.Thread(target=self.handle_client)
-                client_handler.start()
-        except KeyboardInterrupt:
-            print("[info] stopping server...")
-            self.room_socket.close()
+        def run_room():
+            try:
+                while True:
+                    conn, addr = self.room_socket.accept()
+                    print(f"[info] connection established with {addr}")
+                    client_handler = threading.Thread(target=self.handle_client)
+                    client_handler.start()
+            except KeyboardInterrupt:
+                print("[info] stopping server...")
+                self.room_socket.close()
+
+        room_thread = threading.Thread(target=run_room)
+        room_thread.start()
 
     def handle_client(self, room_socket):
         with room_socket:
