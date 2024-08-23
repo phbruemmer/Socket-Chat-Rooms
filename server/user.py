@@ -1,6 +1,3 @@
-import rooms.chat_rooms
-
-
 class User:
     def __init__(self, username, user_id):
         self.username = username

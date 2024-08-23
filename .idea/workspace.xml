@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="-">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- changed pass to print statement...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/lobby_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/lobby_console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rooms/chat_rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/rooms/chat_rooms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,7 +392,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724280330352</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="- Added a new thread to start_room -method to start the new room">
+      <option name="closed" value="true" />
+      <created>1724350100011</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724350100011</updated>
+    </task>
+    <task id="LOCAL-00025" summary="- Modified cmd_instruction method&#10;- Small changes in cmd_create -method">
+      <option name="closed" value="true" />
+      <created>1724350152488</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724350152488</updated>
+    </task>
+    <task id="LOCAL-00026" summary="- changed pass to print statement...">
+      <option name="closed" value="true" />
+      <created>1724350176599</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724350176599</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -410,8 +431,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- First commit" />
-    <MESSAGE value="- finished broadcast beacon" />
     <MESSAGE value="- finished broadcast beacon - 2" />
     <MESSAGE value="- Added room class&#10;- Added Lobby connection" />
     <MESSAGE value="- Added more settings to the chat_rooms.&#10;- Fixed HOST-issue (missing -&gt; ())" />
@@ -434,6 +453,9 @@
     <MESSAGE value="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py" />
     <MESSAGE value="- Small changes to the codebase" />
     <MESSAGE value="-" />
-    <option name="LAST_COMMIT_MESSAGE" value="-" />
+    <MESSAGE value="- Added a new thread to start_room -method to start the new room" />
+    <MESSAGE value="- Modified cmd_instruction method&#10;- Small changes in cmd_create -method" />
+    <MESSAGE value="- changed pass to print statement..." />
+    <option name="LAST_COMMIT_MESSAGE" value="- changed pass to print statement..." />
   </component>
 </project>
