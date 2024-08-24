@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- changed pass to print statement...">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- removed unused import" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -416,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724350176599</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="- removed unused import">
+      <option name="closed" value="true" />
+      <created>1724380142210</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724380142210</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -431,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- finished broadcast beacon - 2" />
     <MESSAGE value="- Added room class&#10;- Added Lobby connection" />
     <MESSAGE value="- Added more settings to the chat_rooms.&#10;- Fixed HOST-issue (missing -&gt; ())" />
     <MESSAGE value="- returns received Port for the Lobby Server  from BROADCAST back to main-routine.&#10;- modified TCP connection -&gt; with-statement" />
@@ -456,6 +461,7 @@
     <MESSAGE value="- Added a new thread to start_room -method to start the new room" />
     <MESSAGE value="- Modified cmd_instruction method&#10;- Small changes in cmd_create -method" />
     <MESSAGE value="- changed pass to print statement..." />
-    <option name="LAST_COMMIT_MESSAGE" value="- changed pass to print statement..." />
+    <MESSAGE value="- removed unused import" />
+    <option name="LAST_COMMIT_MESSAGE" value="- removed unused import" />
   </component>
 </project>

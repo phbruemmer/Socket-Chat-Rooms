@@ -1,6 +1,5 @@
 import socket
 import threading
-# import server.user
 
 HOST = socket.gethostbyname(socket.gethostname())
 
