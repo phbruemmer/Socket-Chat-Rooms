@@ -81,7 +81,7 @@ def server_lobby_cmd(conn):
 
     username_ = conn.recv(BUFFER).decode()
     print(username_)
-    cur_user = user.User(username_, user_id)
+    cur_user = user.User(username_, user_id, conn)
     command_line(cur_user)
 
 
