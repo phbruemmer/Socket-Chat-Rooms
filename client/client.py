@@ -2,7 +2,6 @@ import socket
 import struct
 import threading
 import re
-import time
 
 BROADCAST_PORT = 5555
 TIMEOUTS = 10
@@ -53,8 +52,9 @@ def get_username(sock):
 
 def connected_client(sock):
     connected = threading.Event()
+    print_event = threading.Event()
 
-    """def receiver(connection):
+    def receiver(connection):
         print("[info] listening to server...")
         try:
             while not connection.is_set():
@@ -63,6 +63,7 @@ def connected_client(sock):
                     print("[info] no data received, server might have closed the connection.")
                     connection.set()
                     break
+                print_event.set()
                 print(data_.decode())
         except ConnectionResetError:
             print("[error] Connection was reset by the server.")
@@ -70,14 +71,21 @@ def connected_client(sock):
         except Exception as e:
             print(f"[error] Unexpected error in receiver: {e}")
         finally:
-            print("[info] receiver thread closing.")"""
+            print("[info] receiver thread closing.")
+
+    """      
+        Maybe remove receive thread and add it after every time the user sends a command / message to the server.
+    """
 
     def sender(connection):
         print("[info] chat available.")
         try:
             while not connection.is_set():
+                print_event.wait()
+                print("\n")
                 msg_ = input("> ")
                 sock.send(msg_.encode())
+                print_event.clear()
                 if msg_ == "$exit":
                     connection.set()
                     return
@@ -89,8 +97,8 @@ def connected_client(sock):
         finally:
             print("[info] sender thread closing.")
 
-    # recv_thread = threading.Thread(target=receiver, args=(connected,))
-    # recv_thread.start()
+    recv_thread = threading.Thread(target=receiver, args=(connected,))
+    recv_thread.start()
     sender(connected)
 
     # recv_thread.join()
