@@ -16,18 +16,18 @@ class Room:
         self.room_socket.bind((host, port))
         self.room_socket.listen(max_users)
         self.admin = admin
-        print(f"[info] new room started and listening on {self.host}:{self.port}")
+        print(f"[info-room-class] new room started and listening on {self.host}:{self.port}")
 
     def start_room(self):
         def run_room():
             try:
                 while True:
                     conn, addr = self.room_socket.accept()
-                    print(f"[info] connection established with {addr}")
+                    print(f"[info-room-class] connection established with {addr}")
                     client_handler = threading.Thread(target=self.handle_client)
                     client_handler.start()
             except KeyboardInterrupt:
-                print("[info] stopping server...")
+                print("[info-room-class] stopping server...")
                 self.room_socket.close()
 
         room_thread = threading.Thread(target=run_room)
