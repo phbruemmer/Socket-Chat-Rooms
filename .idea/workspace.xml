@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Added server side input checks to the Lobby class for more security.&#10;- Added success and failure send methods from user class">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- small changes in server.py&#10;- Added validation methods to User class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -474,7 +472,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724778484560</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="- small changes in server.py&#10;- Added validation methods to User class.">
+      <option name="closed" value="true" />
+      <created>1724778572472</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1724778572472</updated>
+    </task>
+    <task id="LOCAL-00035" summary="- small changes in server.py&#10;- Added validation methods to User class.">
+      <option name="closed" value="true" />
+      <created>1724778918421</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1724778918421</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -489,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="- removed imports from lobby_console.py" />
     <MESSAGE value="- Added initial connection sequence.&#10;- Added input restrictions" />
     <MESSAGE value="- small changes" />
@@ -514,6 +527,7 @@
     <MESSAGE value="- Added better debugging information and logging" />
     <MESSAGE value="- Added better thread handling and removed unused imports" />
     <MESSAGE value="- Added server side input checks to the Lobby class for more security.&#10;- Added success and failure send methods from user class" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added server side input checks to the Lobby class for more security.&#10;- Added success and failure send methods from user class" />
+    <MESSAGE value="- small changes in server.py&#10;- Added validation methods to User class." />
+    <option name="LAST_COMMIT_MESSAGE" value="- small changes in server.py&#10;- Added validation methods to User class." />
   </component>
 </project>
