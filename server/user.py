@@ -1,5 +1,5 @@
 import time
-
+import struct
 from server import CLIENTS
 
 class User:
@@ -9,7 +9,7 @@ class User:
         self.conn = conn
 
     def change_room(self, room):
-        print(f"[info] changing room to {room.room_name}...")
+        print(f"[info-user-class] changing room to {room.room_name}...")
         print(CLIENTS)
         conn = self.conn
         change_room_msg = b'$change_room$'
@@ -25,3 +25,11 @@ class User:
         valid_cmd = conn.recv(1).decode()
         if not valid_cmd:
             return
+
+    def send_success(self):
+        print("[user-class] sending success...")
+        self.conn.send(struct.pack('?', True))
+
+    def send_failure(self):
+        print("[user-class] sending failure...")
+        self.conn.send(struct.pack('?', False))

@@ -3,7 +3,6 @@ import socket
 import struct
 import threading
 import time
-
 import lobby_console as lc
 import user
 
@@ -59,6 +58,7 @@ def server_lobby_cmd(conn):
     :param conn:
     :return:
     """
+
     def random_user_id():
         while True:
             random_num = random.randint(1, 999999)
@@ -80,7 +80,7 @@ def server_lobby_cmd(conn):
     print(CLIENTS)
 
     username_ = conn.recv(BUFFER).decode()
-    print(username_)
+    conn.send(username_.encode())
     cur_user = user.User(username_, user_id, conn)
     command_line(cur_user)
 
