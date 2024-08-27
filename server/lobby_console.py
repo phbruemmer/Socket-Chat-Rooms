@@ -1,5 +1,5 @@
 import random
-
+import re
 import rooms.chat_rooms
 
 
@@ -7,9 +7,18 @@ used_ports = []
 
 
 class Lobby:
+    def server_side_input_checks(self, data):
+        if not re.match(r"^[A-Za-z0-9]*$", data) or re.match(r'^[\s\t\n]*$', data):
+            return False
+        else:
+            return True
+
     def cmd_username(self, user, new_username):
-        print(new_username)
-        user.username = new_username
+        if self.server_side_input_checks(new_username):
+            user.username = new_username
+            user.send_success()
+        else:
+            user.send_failure()
 
     def cmd_create(self, user, create_type, name, password=''):
         def get_available_port():
@@ -43,4 +52,6 @@ class Lobby:
             if argument_length < 3:
                 cmd_instructions.append('')
             self.cmd_create(user, cmd_instructions[1], cmd_instructions[2], cmd_instructions[3])
+        else:
+            user.send_failure()
 
