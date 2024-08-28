@@ -64,6 +64,11 @@ def connected_client(sock):
                     connection.set()
                     break
                 print_event.set()
+                success_request_data = struct.unpack('?', data_)
+                if success_request_data:
+                    print("[client-info] command executed on server-side.")
+                elif not success_request_data:
+                    print("[client-info] ")
                 print(data_.decode())
         except ConnectionResetError:
             print("[error] Connection was reset by the server.")
@@ -72,10 +77,6 @@ def connected_client(sock):
             print(f"[error] Unexpected error in receiver: {e}")
         finally:
             print("[info] receiver thread closing.")
-
-    """      
-        Maybe remove receive thread and add it after every time the user sends a command / message to the server.
-    """
 
     def sender(connection):
         print("[info] chat available.")
