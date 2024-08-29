@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Added random user id (implementation not 100% as intended)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723238859029</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Added random user id (implementation not 100% as intended)">
+      <option name="closed" value="true" />
+      <created>1723321185197</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723321185197</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -286,6 +293,7 @@
     <MESSAGE value="- Added more commenting&#10;- completed client thread&#10;-&gt; working on:&#10;- server_lobby_cmd -&gt; server lobby commands to send and process commands from client" />
     <MESSAGE value="- Added User class&#10;- Thinking about solutions on how to use &quot;user accounts&quot; to send and receive data in a room. This approach should enable direct messages in the future too." />
     <MESSAGE value="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Modified classes&#10;- fixed known issue (no need to create a new class each time someone sends a command)" />
+    <MESSAGE value="- Added random user id (implementation not 100% as intended)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added random user id (implementation not 100% as intended)" />
   </component>
 </project>
