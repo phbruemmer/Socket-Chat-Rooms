@@ -1,5 +1,7 @@
 import socket
 import struct
+import threading
+import re
 
 BROADCAST_PORT = 5555
 TIMEOUTS = 10
@@ -34,10 +36,81 @@ def listen_for_broadcast_message():
     return (addr[0], PORT) if addr or PORT else None
 
 
+def get_username(sock):
+    print("# # # # # # # # # # # # # # #\nE N T E R - U S E R N A M E\n")
+    username = input("> > > ")
+    #
+    # Maybe insecure because of client-side manipulation and no server-side checks
+    #
+    while not re.match(r"^[A-Za-z0-9]*$", username) or re.match(r'^[\s\t\n]*$', username):
+        print("[info] only english letters and numbers from 0 - 9 are allowed.")
+        username = input("> > > ")
+    print("[info] valid username received.\n[info] sending username for user validation...")
+    sock.send(username.encode())
+    print("[info] username sent.")
+
+
+def connected_client(sock):
+    connected = threading.Event()
+    print_event = threading.Event()
+
+    def receiver(connection):
+        print("[info] listening to server...")
+        try:
+            while not connection.is_set():
+                data_ = sock.recv(BUFFER)
+                if not data_:
+                    print("[info] no data received, server might have closed the connection.")
+                    connection.set()
+                    break
+                print_event.set()
+                success_request_data = struct.unpack('?', data_)
+                if success_request_data:
+                    print("[client-info] command executed on server-side.")
+                elif not success_request_data:
+                    print("[client-info] ")
+                print(data_.decode())
+        except ConnectionResetError:
+            print("[error] Connection was reset by the server.")
+            connection.set()
+        except Exception as e:
+            print(f"[error] Unexpected error in receiver: {e}")
+        finally:
+            print("[info] receiver thread closing.")
+
+    def sender(connection):
+        print("[info] chat available.")
+        try:
+            while not connection.is_set():
+                print_event.wait()
+                print("\n")
+                msg_ = input("> ")
+                sock.send(msg_.encode())
+                print_event.clear()
+                if msg_ == "$exit":
+                    connection.set()
+                    return
+        except BrokenPipeError:
+            print("[error] Cannot send data, connection closed.")
+            connection.set()
+        except Exception as e:
+            print(f"[error] Unexpected error in sender: {e}")
+        finally:
+            print("[info] sender thread closing.")
+
+    recv_thread = threading.Thread(target=receiver, args=(connected,))
+    recv_thread.start()
+    sender(connected)
+
+    # recv_thread.join()
+    print("[info] Client disconnected.")
+
+
 def connect_to_lobby(addr, port):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.connect((addr, port))
-        sock.send(b'$username DIIDN')
+        get_username(sock)
+        connected_client(sock)
         sock.close()
 
 

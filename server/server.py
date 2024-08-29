@@ -4,6 +4,7 @@ import struct
 import threading
 import time
 import lobby_console as lc
+import user
 
 HOSTNAME = socket.gethostname()
 HOST = socket.gethostbyname(HOSTNAME)
@@ -58,9 +59,30 @@ def server_lobby_cmd(conn):
     :return:
     """
 
-    data_ = conn.recv(BUFFER).decode()
-    lobby.process_command(data_)
-    print("[info] waiting for next command...")
+    def random_user_id():
+        while True:
+            random_num = random.randint(1, 999999)
+            if random_num not in CLIENTS:
+                break
+        return random_num
+
+    def command_line(user_):
+        while True:
+            data_ = conn.recv(BUFFER)
+            if not data_:
+                break
+            data_ = data_.decode()
+            lobby.process_command(command=data_, user=user_)
+            print(user_.username)
+
+    user_id = random_user_id()
+    CLIENTS[user_id] = conn
+    print(CLIENTS)
+
+    username_ = conn.recv(BUFFER).decode()
+    conn.send(username_.encode())
+    cur_user = user.User(username_, user_id, conn)
+    command_line(cur_user)
 
 
 def server_main_lobby():
@@ -68,11 +90,6 @@ def server_main_lobby():
     - accepts TCP connections and starts new thread to handle new client.
     :return:
     """
-    def random_user_id():
-        # Problem:
-        # User ID can be overwritten
-        random_num = random.randint(1, 9999)
-        return random_num
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind((HOST, PORT))
@@ -82,10 +99,6 @@ def server_main_lobby():
             while not TCP_CONNECTION_EVENT.is_set():
                 conn, addr = sock.accept()
                 print(f"[info] connection from {addr}")
-                user_id = random_user_id()
-                print(user_id)
-                CLIENTS[1] = conn
-                print(CLIENTS)
                 server_lobby_thread = threading.Thread(target=server_lobby_cmd, args=(conn,))
                 server_lobby_thread.start()
         except socket.timeout:
@@ -112,36 +125,3 @@ def server_main():
 
 if __name__ == "__main__":
     server_main()
-
-
-
-
-
-
-"""
-# # # SERVER - STRUCTURE # # #
-
--> Send Broadcast Beacon
--> Client gets IP and connects with TCP to the server...
--> TCP connection established
--> "Lobby" - available commands: 
-                -> list_chats
-                -> join {ip/name} [username]
-                -> create [room] 
-                    room: [name] [encryption_type] [allowed user number] [only chat / only voice / both] [open/closed]
-                        -> encryption_type:
-                            - encryption with own key
-                            - encryption based on own script
-                            - open-encryption (saved on server)
--> "room" - available commands:
-                -> !leave
-                -> !ban (only admins)
-                -> !kick (only admins)
-                -> !add_admin [name] (only admins)
-                -> !rm_admin [name] (only admins) [OWNER EXCLUDED]
-                -> !mute
-                -> !unmute
-                -> !deaf -> [name] (only admins)
-                -> !terminate
-"""
-
