@@ -11,7 +11,7 @@ class User:
     def change_room(self, room):
         print(f"[info-user-class] changing room to {room.room_name}...")
         conn = self.conn
-        change_room_msg = b'$change_room$'
+        change_room_msg = b'change_room$'
         conn.send(change_room_msg)
         valid_cmd = conn.recv(1).decode()
         if not valid_cmd:
