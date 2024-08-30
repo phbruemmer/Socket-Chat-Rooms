@@ -1,11 +1,11 @@
 class Instruction:
-    def __init__(self):
-        pass
+    def __init__(self, sock):
+        self.sock = sock
 
     def username(self):
         pass
 
-    def change_room(self):
+    def change_room(self, addr):
         pass
 
     def detect_instruction(self, instructions):

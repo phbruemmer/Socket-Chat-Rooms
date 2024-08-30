@@ -10,6 +10,12 @@ BUFFER = 1024
 
 
 def listen_for_broadcast_message():
+    """
+    - This function listens to UDP Broadcasts on Broadcast Port 5555.
+    - The UDP Broadcast message from the server contains the port for the TCP connection for the lobby server.
+    - If the address and port exists the function returns it
+    :return:
+    """
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # Address Family, UDP
     sock.bind(('', BROADCAST_PORT))
     sock.settimeout(TIMEOUTS)
@@ -38,6 +44,13 @@ def listen_for_broadcast_message():
 
 
 def get_username(sock):
+    """
+    - This function determines the username and checks whether the username consists of valid characters (only english
+        letters)
+    - The username is sent to the server if it is valid, in case of an invalid username the request will be repeated
+    :param sock:
+    :return:
+    """
     print("# # # # # # # # # # # # # # #\nE N T E R - U S E R N A M E\n")
     username = input("> > > ")
     #
@@ -56,7 +69,12 @@ def connected_client(sock):
     print_event = threading.Event()
 
     def receiver(connection):
-        instruction = instruction_handler.Instruction()
+        """
+        - This function receives data from the server and follows the instructions if given.
+        :param connection:
+        :return:
+        """
+        instruction = instruction_handler.Instruction(sock)
         print("[info] listening to server...")
         try:
             while not connection.is_set():
@@ -115,6 +133,12 @@ def connected_client(sock):
 
 
 def connect_to_lobby(addr, port):
+    """
+    - This function simply connects the client to the server using the TCP protocol with ipv4 address and port
+    :param addr:
+    :param port:
+    :return:
+    """
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.connect((addr, port))
         get_username(sock)
@@ -123,6 +147,10 @@ def connect_to_lobby(addr, port):
 
 
 def client_main():
+    """
+    - Main function to connect the client to the server.
+    :return:
+    """
     addr, port = listen_for_broadcast_message()
     if addr is None:
         return

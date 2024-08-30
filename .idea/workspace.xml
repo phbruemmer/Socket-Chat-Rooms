@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- removed a simple but useless print statement.">
-      <change afterPath="$PROJECT_DIR$/client/instruction_handler.py" afterDir="false" />
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- small change to fit the format for the instruction_handler in client.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/instruction_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/instruction_handler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -532,7 +531,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725042529519</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="- Added instruction_handler.py class to client.py&#10;- The instruction_handler takes care about the instructions coming from the server.">
+      <option name="closed" value="true" />
+      <created>1725053862708</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1725053862708</updated>
+    </task>
+    <task id="LOCAL-00042" summary="- small change to fit the format for the instruction_handler in client.py">
+      <option name="closed" value="true" />
+      <created>1725053893547</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1725053893547</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -547,8 +562,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Could not fix the bug but modified and simplified stuff" />
-    <MESSAGE value="- data receiving still not working&#10;- Tried small change in the receiver function" />
     <MESSAGE value="- Fixed connection error&#10;- Trying to receive data continuously" />
     <MESSAGE value="- Receiving error fixed in command_line() -function." />
     <MESSAGE value="- Small changes in server.py" />
@@ -572,6 +585,8 @@
     <MESSAGE value="- Added better error handling." />
     <MESSAGE value="- Fixed problem that caused an error.&#10;- Added more commenting for better understanding." />
     <MESSAGE value="- removed a simple but useless print statement." />
-    <option name="LAST_COMMIT_MESSAGE" value="- removed a simple but useless print statement." />
+    <MESSAGE value="- Added instruction_handler.py class to client.py&#10;- The instruction_handler takes care about the instructions coming from the server." />
+    <MESSAGE value="- small change to fit the format for the instruction_handler in client.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="- small change to fit the format for the instruction_handler in client.py" />
   </component>
 </project>
