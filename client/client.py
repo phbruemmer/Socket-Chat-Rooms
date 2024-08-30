@@ -2,6 +2,7 @@ import socket
 import struct
 import threading
 import re
+import instruction_handler
 
 BROADCAST_PORT = 5555
 TIMEOUTS = 10
@@ -55,6 +56,7 @@ def connected_client(sock):
     print_event = threading.Event()
 
     def receiver(connection):
+        instruction = instruction_handler.Instruction()
         print("[info] listening to server...")
         try:
             while not connection.is_set():
@@ -63,20 +65,19 @@ def connected_client(sock):
                     print("[info] no data received, server might have closed the connection.")
                     connection.set()
                     break
+                print(data_.decode())
                 print_event.set()
 
-                """
-                    ADD:
-                        - Function that identifies commands from the server and executes the right instructions.
-                        - If no command was found, continue by checking the validation code.
-                """
+                valid_instruction = instruction.detect_instruction(data_)
+
+                if valid_instruction:
+                    continue
 
                 validation_code = struct.unpack('?', data_)
                 if validation_code:
                     print("[client-info] command executed on server-side.")
                 elif not validation_code:
-                    print("[client-info] ")
-                print(data_.decode())
+                    print("[client-info] command could not be executed on server-side.")
         except ConnectionResetError:
             print("[error] Connection was reset by the server.")
         except Exception as e:

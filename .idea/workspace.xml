@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- small changes in client.py">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- removed a simple but useless print statement.">
+      <change afterPath="$PROJECT_DIR$/client/instruction_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,19 +49,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.chat_rooms.executor&quot;: &quot;Run&quot;,
-    &quot;Python.client (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.client.executor&quot;: &quot;Run&quot;,
-    &quot;Python.lobby_console.executor&quot;: &quot;Run&quot;,
-    &quot;Python.server (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/phbru/OneDrive/Desktop/Socket-Chat-Rooms&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.chat_rooms.executor": "Run",
+    "Python.client (1).executor": "Run",
+    "Python.client.executor": "Run",
+    "Python.instruction_handler.executor": "Run",
+    "Python.lobby_console.executor": "Run",
+    "Python.server (1).executor": "Run",
+    "Python.server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/phbru/OneDrive/Desktop/Socket-Chat-Rooms"
   }
-}</component>
+}]]></component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\phbru\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="149d8e2a-874f-4fbd-9031-8cb79bee2049" reportId="pythonProject/qodana/2024-08-17" />
@@ -72,7 +75,7 @@
       <recent name="C:\Users\phbru\PycharmProjects\SocketChat\pythonProject\rooms" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.server (1)">
+  <component name="RunManager" selected="Python.client (1)">
     <configuration name="client (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -95,7 +98,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="instruction_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,11 +107,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/client" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\phbru\PycharmProjects\SocketChat\pythonProject\client\client.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/instruction_handler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -187,9 +190,9 @@
       <list>
         <item itemvalue="Python.client (1)" />
         <item itemvalue="Python.server (1)" />
+        <item itemvalue="Python.instruction_handler" />
         <item itemvalue="Python.lobby_console" />
         <item itemvalue="Python.server" />
-        <item itemvalue="Python.client" />
       </list>
     </recent_temporary>
   </component>
@@ -505,7 +508,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724874715990</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="- Added better error handling.">
+      <option name="closed" value="true" />
+      <created>1725042467747</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1725042467747</updated>
+    </task>
+    <task id="LOCAL-00039" summary="- Fixed problem that caused an error.&#10;- Added more commenting for better understanding.">
+      <option name="closed" value="true" />
+      <created>1725042507531</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1725042507531</updated>
+    </task>
+    <task id="LOCAL-00040" summary="- removed a simple but useless print statement.">
+      <option name="closed" value="true" />
+      <created>1725042529519</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1725042529519</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -520,9 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- small changes" />
-    <MESSAGE value="- small changes due to user class" />
-    <MESSAGE value="- ERROR with receiving username and data" />
     <MESSAGE value="- Could not fix the bug but modified and simplified stuff" />
     <MESSAGE value="- data receiving still not working&#10;- Tried small change in the receiver function" />
     <MESSAGE value="- Fixed connection error&#10;- Trying to receive data continuously" />
@@ -545,6 +569,9 @@
     <MESSAGE value="- small changes in server.py&#10;- Added validation methods to User class." />
     <MESSAGE value="- Commit Test" />
     <MESSAGE value="- small changes in client.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="- small changes in client.py" />
+    <MESSAGE value="- Added better error handling." />
+    <MESSAGE value="- Fixed problem that caused an error.&#10;- Added more commenting for better understanding." />
+    <MESSAGE value="- removed a simple but useless print statement." />
+    <option name="LAST_COMMIT_MESSAGE" value="- removed a simple but useless print statement." />
   </component>
 </project>
