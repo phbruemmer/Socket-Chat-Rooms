@@ -64,18 +64,25 @@ def connected_client(sock):
                     connection.set()
                     break
                 print_event.set()
-                success_request_data = struct.unpack('?', data_)
-                if success_request_data:
+
+                """
+                    ADD:
+                        - Function that identifies commands from the server and executes the right instructions.
+                        - If no command was found, continue by checking the validation code.
+                """
+
+                validation_code = struct.unpack('?', data_)
+                if validation_code:
                     print("[client-info] command executed on server-side.")
-                elif not success_request_data:
+                elif not validation_code:
                     print("[client-info] ")
                 print(data_.decode())
         except ConnectionResetError:
             print("[error] Connection was reset by the server.")
-            connection.set()
         except Exception as e:
             print(f"[error] Unexpected error in receiver: {e}")
         finally:
+            connection.set()
             print("[info] receiver thread closing.")
 
     def sender(connection):
@@ -92,10 +99,10 @@ def connected_client(sock):
                     return
         except BrokenPipeError:
             print("[error] Cannot send data, connection closed.")
-            connection.set()
         except Exception as e:
             print(f"[error] Unexpected error in sender: {e}")
         finally:
+            connection.set()
             print("[info] sender thread closing.")
 
     recv_thread = threading.Thread(target=receiver, args=(connected,))
