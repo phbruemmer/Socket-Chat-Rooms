@@ -55,11 +55,23 @@ def broadcast_beacon():
 def server_lobby_cmd(conn):
     """
     - function to handle new client.
+        - creates new user-id
+        - saves the connection in a dictionary with the user_id as the key.
+        -  receives username from the client.
+        - sends validation code
+        - continues with the command_line() -function which handles the cmd. line.
     :param conn:
     :return:
     """
 
     def random_user_id():
+        """
+        - This function creates a random user id to identify the user in the CLIENTS dictionary.
+        -> Importance of CLIENTS-dictionary:
+            - If the server crashes or closes, it is important to close all running connections.
+              By disconnecting every client from the server, it can shut down properly.
+        :return:
+        """
         while True:
             random_num = random.randint(1, 999999)
             if random_num not in CLIENTS:
@@ -67,6 +79,11 @@ def server_lobby_cmd(conn):
         return random_num
 
     def command_line(user_):
+        """
+        - This function reads the input sent by the client and processes it in the Lobby class.
+        :param user_:
+        :return:
+        """
         while True:
             data_ = conn.recv(BUFFER)
             if not data_:
@@ -80,7 +97,7 @@ def server_lobby_cmd(conn):
     print(CLIENTS)
 
     username_ = conn.recv(BUFFER).decode()
-    conn.send(username_.encode())
+    conn.send(struct.pack('?', True))
     cur_user = user.User(username_, user_id, conn)
     command_line(cur_user)
 
