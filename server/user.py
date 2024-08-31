@@ -11,18 +11,11 @@ class User:
     def change_room(self, room):
         print(f"[info-user-class] changing room to {room.room_name}...")
         conn = self.conn
-        change_room_msg = b'change_room$'
+        change_room_msg = f'change_room${room.host}${room.port}'
         conn.send(change_room_msg)
-        valid_cmd = conn.recv(1).decode()
+        valid_cmd = struct.unpack('?', conn.recv(1))
         if not valid_cmd:
-            return
-        conn.send(room.host)
-        valid_cmd = conn.recv(1).decode()
-        if not valid_cmd:
-            return
-        conn.send(room.port)
-        valid_cmd = conn.recv(1).decode()
-        if not valid_cmd:
+            print("[user-info] failed to change room.\n[user-info] returning to lobby...")
             return
 
     def send_success(self):

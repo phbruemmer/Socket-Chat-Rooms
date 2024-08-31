@@ -5,8 +5,9 @@ class Instruction:
     def username(self):
         pass
 
-    def change_room(self, addr):
+    def change_room(self, instructions):
         pass
+
 
     def detect_instruction(self, instructions):
         instructions = instructions.decode()
