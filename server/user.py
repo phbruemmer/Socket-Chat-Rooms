@@ -1,6 +1,5 @@
-import time
 import struct
-from server import CLIENTS
+
 
 class User:
     def __init__(self, username, user_id, conn):
@@ -17,6 +16,12 @@ class User:
         if not valid_cmd:
             print("[user-info] failed to change room.\n[user-info] returning to lobby...")
             return
+        else:
+            self.disconnect()
+
+    def disconnect(self):
+        print("[user-info] shutting down connection...")
+        self.conn.shutdown()
 
     def send_success(self):
         print("[user-class] sending success...")
