@@ -1,30 +1,6 @@
 import socket
 import struct
-
-
-def check_ip(addr):
-    """
-    - This function checks IP addresses and returns True when a valid ipv4 address is found.
-    :param addr:
-    :return:
-    """
-    addr = addr.split('.')
-    if not len(addr) == 4:
-        return False
-
-    for i in range(0, 4):
-        if not addr[i].isdigit():
-            return False
-    return True
-
-
-def check_port(port):
-    valid_port = True
-    if not isinstance(port, int):
-        valid_port = False
-    if not port >= 3000 and port <= 9000:
-        valid_port = False
-    return valid_port
+import check_data
 
 
 class Instruction:
@@ -36,11 +12,15 @@ class Instruction:
 
     def change_room(self, instructions):
         print("[instruction-info] changing to new room...")
-
-        self.sock.send(struct.pack('?', True))
-        self.sock.shutdown()
+        if not check_data.check_ip(instructions[1]) and check_data.check_port(instructions[2]):
+            return False
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            sock.bind((instructions[1], instructions[2]))
+            sock.connect((instructions[1], instructions[2]))
+
+    def join_threads(self, threads):
+        for thread in threads:
+            thread.join()
+
 
     def detect_instruction(self, instructions):
         instructions = instructions.decode()
@@ -60,7 +40,7 @@ class Instruction:
 
 
 if __name__ == '__main__':
-    print(check_ip('192.168.115.2x0'))
+    print(check_data.check_ip('192.168.115.2x0'))
 
 
 
