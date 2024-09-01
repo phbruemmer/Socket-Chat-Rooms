@@ -53,9 +53,7 @@ def get_username(sock):
     """
     print("# # # # # # # # # # # # # # #\nE N T E R - U S E R N A M E\n")
     username = input("> > > ")
-    #
-    # Maybe insecure because of client-side manipulation and no server-side checks
-    #
+
     while not re.match(r"^[A-Za-z0-9]*$", username) or re.match(r'^[\s\t\n]*$', username):
         print("[info] only english letters and numbers from 0 - 9 are allowed.")
         username = input("> > > ")

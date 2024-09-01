@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Modified change_room method in User class.">
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Added ip and port checker, as well as shutdown functionality">
+      <change afterPath="$PROJECT_DIR$/client/check_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/instruction_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/instruction_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
     </list>
@@ -74,7 +76,7 @@
       <recent name="C:\Users\phbru\PycharmProjects\SocketChat\pythonProject\rooms" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.instruction_handler">
+  <component name="RunManager" selected="Python.client (1)">
     <configuration name="client (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -187,9 +189,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.instruction_handler" />
         <item itemvalue="Python.client (1)" />
         <item itemvalue="Python.server (1)" />
+        <item itemvalue="Python.instruction_handler" />
         <item itemvalue="Python.lobby_console" />
         <item itemvalue="Python.server" />
       </list>
@@ -563,7 +565,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725105740391</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="- Added ip and port checker, as well as shutdown functionality">
+      <option name="closed" value="true" />
+      <created>1725136464286</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1725136464286</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -578,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Small changes in server.py" />
     <MESSAGE value="- Added Admin argument to chat_rooms.py" />
     <MESSAGE value="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py" />
     <MESSAGE value="- Small changes to the codebase" />
@@ -603,6 +612,7 @@
     <MESSAGE value="- small change to fit the format for the instruction_handler in client.py" />
     <MESSAGE value="- Added more comments and small changes in instruction_handler.py" />
     <MESSAGE value="- Modified change_room method in User class." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Modified change_room method in User class." />
+    <MESSAGE value="- Added ip and port checker, as well as shutdown functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added ip and port checker, as well as shutdown functionality" />
   </component>
 </project>

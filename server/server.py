@@ -124,7 +124,7 @@ def server_main_lobby():
             print(f"[ERROR] connection handling error: {e}")
         finally:
             TCP_CONNECTION_EVENT.set()
-            sock.close()
+            sock.shutdown()
             print("[info] server socket closed.")
 
 
