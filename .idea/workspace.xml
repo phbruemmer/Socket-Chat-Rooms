@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Added ip and port checker, as well as shutdown functionality">
-      <change afterPath="$PROJECT_DIR$/client/check_data.py" afterDir="false" />
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- In general, only small changes to the main client.py and server.py files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/instruction_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/instruction_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +74,7 @@
       <recent name="C:\Users\phbru\PycharmProjects\SocketChat\pythonProject\rooms" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.client (1)">
+  <component name="RunManager" selected="Python.server (1)">
     <configuration name="client (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -573,7 +571,39 @@
       <option name="project" value="LOCAL" />
       <updated>1725136464286</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="- created separate file for ip / port checking">
+      <option name="closed" value="true" />
+      <created>1725173403942</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1725173403942</updated>
+    </task>
+    <task id="LOCAL-00047" summary="- removed useless validation process">
+      <option name="closed" value="true" />
+      <created>1725173434708</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1725173434708</updated>
+    </task>
+    <task id="LOCAL-00048" summary="- moved ip / port checking functions to another file&#10;- Added join threads method to join the running threads (work in progress)&#10;- changed sock.bind to sock.connect">
+      <option name="closed" value="true" />
+      <created>1725173556855</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1725173556855</updated>
+    </task>
+    <task id="LOCAL-00049" summary="- In general, only small changes to the main client.py and server.py files">
+      <option name="closed" value="true" />
+      <created>1725173590499</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1725173590499</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -588,10 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Added Admin argument to chat_rooms.py" />
-    <MESSAGE value="- Prepared room creation command in lobby_console.py and added default argument for change_room method in user.py" />
-    <MESSAGE value="- Small changes to the codebase" />
-    <MESSAGE value="-" />
     <MESSAGE value="- Added a new thread to start_room -method to start the new room" />
     <MESSAGE value="- Modified cmd_instruction method&#10;- Small changes in cmd_create -method" />
     <MESSAGE value="- changed pass to print statement..." />
@@ -613,6 +639,10 @@
     <MESSAGE value="- Added more comments and small changes in instruction_handler.py" />
     <MESSAGE value="- Modified change_room method in User class." />
     <MESSAGE value="- Added ip and port checker, as well as shutdown functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added ip and port checker, as well as shutdown functionality" />
+    <MESSAGE value="- created separate file for ip / port checking" />
+    <MESSAGE value="- removed useless validation process" />
+    <MESSAGE value="- moved ip / port checking functions to another file&#10;- Added join threads method to join the running threads (work in progress)&#10;- changed sock.bind to sock.connect" />
+    <MESSAGE value="- In general, only small changes to the main client.py and server.py files" />
+    <option name="LAST_COMMIT_MESSAGE" value="- In general, only small changes to the main client.py and server.py files" />
   </component>
 </project>

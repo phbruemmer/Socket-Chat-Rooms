@@ -1,4 +1,5 @@
 import struct
+import threading
 
 
 class User:
@@ -7,6 +8,7 @@ class User:
         self.user_id = user_id
         self.conn = conn
 
+    cmd_line_event = threading.Event()
     def change_room(self, room):
         print(f"[info-user-class] changing room to {room.room_name}...")
         conn = self.conn
@@ -17,6 +19,7 @@ class User:
     def disconnect(self):
         print("[user-info] shutting down connection...")
         self.conn.close()
+
 
     def send_success(self):
         print("[user-class] sending success...")

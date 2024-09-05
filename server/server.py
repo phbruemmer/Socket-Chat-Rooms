@@ -57,7 +57,7 @@ def server_lobby_cmd(conn):
     - function to handle new client.
         - creates new user-id
         - saves the connection in a dictionary with the user_id as the key.
-        -  receives username from the client.
+        - receives username from the client.
         - sends validation code
         - continues with the command_line() -function which handles the cmd. line.
     :param conn:
@@ -84,7 +84,7 @@ def server_lobby_cmd(conn):
         :param user_:
         :return:
         """
-        while True:
+        while not user_.cmd_line_event.is_set():
             data_ = conn.recv(BUFFER)
             if not data_:
                 break
@@ -124,7 +124,7 @@ def server_main_lobby():
             print(f"[ERROR] connection handling error: {e}")
         finally:
             TCP_CONNECTION_EVENT.set()
-            sock.shutdown()
+            sock.shutdown(1)
             print("[info] server socket closed.")
 
 
