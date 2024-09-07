@@ -14,6 +14,7 @@ class Instruction:
         print("[instruction-info] changing to new room...")
         if not check_data.check_ip(instructions[1]) and check_data.check_port(instructions[2]):
             return False
+        self.sock.disconnect()
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
             sock.connect((instructions[1], instructions[2]))
 
