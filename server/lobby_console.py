@@ -30,6 +30,7 @@ class Lobby:
 
         if create_type == 'chat':
             port = get_available_port()
+            user.disconnect()
             new_room = rooms.chat_rooms.Room(port=port, room_name=name, room_password=password, admin=user)
             new_room.start_room()
             user.change_room(new_room)

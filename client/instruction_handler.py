@@ -21,7 +21,6 @@ class Instruction:
         for thread in threads:
             thread.join()
 
-
     def detect_instruction(self, instructions):
         instructions = instructions.decode()
         if isinstance(instructions, (bytes, bytearray, memoryview)):
