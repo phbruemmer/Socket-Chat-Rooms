@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- No clue how to change the connection.&#10;- My current plan is to disconnect the client from the server, stop all associated threads and then connect the client to the provided room." />
+    <list default="true" id="2fd85f07-5c88-4c0f-8016-678099479182" name="Changes" comment="- Have to rewrite the whole change server function and all other functions that are associated with the change server function.&#10;- Just an updated version, so I am uptodate on all devices" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -206,14 +206,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1722803919289</updated>
-    </task>
-    <task id="LOCAL-00003" summary="- finished broadcast beacon - 2">
-      <option name="closed" value="true" />
-      <created>1722858693483</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1722858693483</updated>
     </task>
     <task id="LOCAL-00004" summary="- Added room class&#10;- Added Lobby connection">
       <option name="closed" value="true" />
@@ -599,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725735428014</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="- Have to rewrite the whole change server function and all other functions that are associated with the change server function.&#10;- Just an updated version, so I am uptodate on all devices">
+      <option name="closed" value="true" />
+      <created>1725736378822</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1725736378822</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -614,7 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- changed pass to print statement..." />
     <MESSAGE value="- removed unused import" />
     <MESSAGE value="- removed unused import in chat_rooms.py" />
     <MESSAGE value="- user.py sends new room host / port to the client&#10;- NOT TRIED YET&#10;..." />
@@ -639,6 +638,7 @@
     <MESSAGE value="- In general, only small changes to the main client.py and server.py files" />
     <MESSAGE value="- [...]" />
     <MESSAGE value="- No clue how to change the connection.&#10;- My current plan is to disconnect the client from the server, stop all associated threads and then connect the client to the provided room." />
-    <option name="LAST_COMMIT_MESSAGE" value="- No clue how to change the connection.&#10;- My current plan is to disconnect the client from the server, stop all associated threads and then connect the client to the provided room." />
+    <MESSAGE value="- Have to rewrite the whole change server function and all other functions that are associated with the change server function.&#10;- Just an updated version, so I am uptodate on all devices" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Have to rewrite the whole change server function and all other functions that are associated with the change server function.&#10;- Just an updated version, so I am uptodate on all devices" />
   </component>
 </project>
